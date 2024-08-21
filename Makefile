@@ -1,3 +1,5 @@
+default: test build
+
 run: venv
 	. venv/bin/activate && python manage.py runserver
 
