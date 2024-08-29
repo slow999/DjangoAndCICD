@@ -14,6 +14,12 @@ venv: requirements.txt
 	. venv/bin/activate && pip install --upgrade pip && \
 	pip install -r requirements.txt
 
+deploy: docker-compose.yaml
+	docker compose up -d
+
+stop: docker-compose.yaml
+	docker compose down
+
 clean:
 	rm -rf htmlcov/ .coverage
 
